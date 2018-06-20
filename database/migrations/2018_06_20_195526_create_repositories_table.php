@@ -15,6 +15,11 @@ class CreateRepositoriesTable extends Migration
     {
         Schema::create('repositories', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('company');
+            $table->string('location');
+            $table->string('github_id');
+            $table->text('description');
             $table->timestamps();
         });
     }
